@@ -21,7 +21,8 @@
 */
 
 
-const vue_app = vue.createApp({
+const vue_app = new Vue({
+      el: '#vue_app',
       // This automatically imports your movies.json file and puts it into
       //   the variable: movies
       created () {
@@ -30,95 +31,33 @@ const vue_app = vue.createApp({
             })
       },
       data: {
-        return {
             // This holds your movies.json data.
             movies: [],
-
 
             title: "IDB + Jessica Chouha's Top 8 movies",
             owner: "Jessica Chouha",
             github: ''
-        }
       },
       methods: {
             /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
-            getMonthText(dateArray)
-            {
-              let month="";
-              switch (dateArray[1]){
-                case 1:
-                month='January';
-                break;
-                case 2:
-                month='Februay';
-                break;
-                case 3:
-                month='March';
-                break;
-                case 4:
-                month='April';
-                break;
-                case 5:
-                month='May';
-                break;
-                case 6:
-                month='June';
-                break;
-                case 7:
-                month='July';
-                break;
-                case 8:
-                month='August';
-                break;
-                case 9:
-                month='September';
-                break;
-                case 10:
-                month='October';
-                break;
-                case 11:
-                month='November';
-                break;
-                case 12:
-                month='december';
-                break;
-                default:
-                  month ="Month"
-              }
-              return month + " " + dataArray[2] + "," + dataArray[0];
-            },
+            function (getMonthText){
 
-            posterClick(index)
-            {
-              if(this.movies[index].posterindex < this.movies[index].posters.length -1)
-              {
-                this.movies[index].posterindex++;
-                else {
-                  this.movies[index].posterindex =0;
-                }
-              },
-
-              textTime(minutes)
-              {
-                return Math.trunc(minutes/60) + "h" + (minutes%60) + "m";
-              }
             }
-          })
 
-          vue_app.mount("#vue_app")
+            function (like){
 
-            like: function(index){
-              this.movies[index].likes +=1;
-            },
-
-            dislike: function(index){
-              this.movies[index].dislikes -=1;
-            },
-
-            posterClick: function(index){
-              var currentPosterIndex= this.movies[index].posterindex;
-              var currentPoster = this.movies[index].posters.length -1;
-
-              if(current)
             }
+
+            function (dislike){
+
+            }
+
+            function (posterClick){
+
+            }
+
+            function (timeText){
+
+            }
+      }
 })
